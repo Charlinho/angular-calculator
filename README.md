@@ -1,4 +1,4 @@
-# angular-calculator
+# Angular Calculator
 Web calculator
 
 # Setup
