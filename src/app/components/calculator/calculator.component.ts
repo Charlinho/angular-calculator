@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css']
 })
-export class CalculatorComponent implements OnInit {
+export class CalculatorComponent {
 
-  constructor() { }
+  displayValue: string = '0';
 
-  ngOnInit() {
+  public setNumber(number): void {
+    if (this.displayValue === '0') {      
+      this.displayValue = '';
+    }
+
+    this.displayValue = '' + this.displayValue + number;
   }
 
+  public clear(): void {
+    this.displayValue = '0';
+  }
 }

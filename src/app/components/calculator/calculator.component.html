@@ -3,30 +3,34 @@
   <div class="row">
     <div class="col s12 l4 offset-l4 xl4 offset-xl4">
       <div class="card-panel blue-grey lighten-3 right-align display">
-        <span class="black-text fa-2x">0</span>
-      </div>
+        <span class="black-text fa-2x">{{ displayValue }}</span>
+      </div>      
       <div class="buttons">
-          <app-calculator-button [name]="'C'"></app-calculator-button>
+          <app-calculator-button [name]="'C'" (value)="clear($event)"></app-calculator-button>
           <app-calculator-button [name]="'+/-'"></app-calculator-button>
           <app-calculator-button [name]="'%'"></app-calculator-button>
           <app-calculator-button [name]="'&divide;'" [class-style]="'orange accent-3 btn'"></app-calculator-button>
           
-          <app-calculator-button [name]="7"></app-calculator-button>
-          <app-calculator-button [name]="8"></app-calculator-button>
-          <app-calculator-button [name]="9"></app-calculator-button>
+          <app-calculator-button [name]="7" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="8" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="9" (value)="setNumber($event)"></app-calculator-button>
           <app-calculator-button [name]="'*'" [class-style]="'orange accent-3 btn'"></app-calculator-button>
           
-          <app-calculator-button [name]="4"></app-calculator-button>
-          <app-calculator-button [name]="5"></app-calculator-button>
-          <app-calculator-button [name]="6"></app-calculator-button>
+          <app-calculator-button [name]="4" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="5" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="6" (value)="setNumber($event)"></app-calculator-button>
           <app-calculator-button [name]="'-'" [class-style]="'orange accent-3 btn'"></app-calculator-button>        
 
-          <app-calculator-button [name]="1"></app-calculator-button>
-          <app-calculator-button [name]="2"></app-calculator-button>
-          <app-calculator-button [name]="3"></app-calculator-button>
+          <app-calculator-button [name]="1" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="2" (value)="setNumber($event)"></app-calculator-button>
+          <app-calculator-button [name]="3" (value)="setNumber($event)"></app-calculator-button>
           <app-calculator-button [name]="'+'" [class-style]="'orange accent-3 btn'"></app-calculator-button>      
 
-          <app-calculator-button [name]="0" [col-size]="'col s6'" [class-style]="'btn btn-special'"></app-calculator-button>
+          <app-calculator-button [name]="0"
+                                 [col-size]="'col s6'"
+                                 [class-style]="'btn btn-special'"
+                                 (value)="setNumber($event)">
+          </app-calculator-button>
           <app-calculator-button [name]="'.'"></app-calculator-button>
           <app-calculator-button [name]="'='" [class-style]="'orange accent-3 btn'"></app-calculator-button>
       </div>
