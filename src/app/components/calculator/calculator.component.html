@@ -6,29 +6,29 @@
         <span class="black-text fa-2x">0</span>
       </div>
       <div class="buttons">
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">C</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">+/-</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">%</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light orange accent-3 btn">&divide;</button></div>
-  
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">7</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">8</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">9</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light orange accent-3 btn">*</button></div>
-  
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">4</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">5</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">6</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light orange accent-3 btn">-</button></div>
-  
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">1</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">2</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">3</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light orange accent-3 btn">+</button></div>
-  
-          <div class="col s6"><button type="button" class="waves-effect waves-light btn btn-special">0</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light btn">.</button></div>
-          <div class="col s3"><button type="button" class="waves-effect waves-light orange accent-3 btn">=</button></div>
+          <app-calculator-button [name]="'C'"></app-calculator-button>
+          <app-calculator-button [name]="'+/-'"></app-calculator-button>
+          <app-calculator-button [name]="'%'"></app-calculator-button>
+          <app-calculator-button [name]="'&divide;'" [class-style]="'orange accent-3 btn'"></app-calculator-button>
+          
+          <app-calculator-button [name]="7"></app-calculator-button>
+          <app-calculator-button [name]="8"></app-calculator-button>
+          <app-calculator-button [name]="9"></app-calculator-button>
+          <app-calculator-button [name]="'*'" [class-style]="'orange accent-3 btn'"></app-calculator-button>
+          
+          <app-calculator-button [name]="4"></app-calculator-button>
+          <app-calculator-button [name]="5"></app-calculator-button>
+          <app-calculator-button [name]="6"></app-calculator-button>
+          <app-calculator-button [name]="'-'" [class-style]="'orange accent-3 btn'"></app-calculator-button>        
+
+          <app-calculator-button [name]="1"></app-calculator-button>
+          <app-calculator-button [name]="2"></app-calculator-button>
+          <app-calculator-button [name]="3"></app-calculator-button>
+          <app-calculator-button [name]="'+'" [class-style]="'orange accent-3 btn'"></app-calculator-button>      
+
+          <app-calculator-button [name]="0" [col-size]="'col s6'" [class-style]="'btn btn-special'"></app-calculator-button>
+          <app-calculator-button [name]="'.'"></app-calculator-button>
+          <app-calculator-button [name]="'='" [class-style]="'orange accent-3 btn'"></app-calculator-button>
       </div>
     </div>
   </div>
