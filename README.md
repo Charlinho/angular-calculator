@@ -1,5 +1,5 @@
 # Angular Calculator
-Web calculator
+Web calculator using Angular 5(+) and Materialize
 
 # Setup
 You need to have Node.js installed 
