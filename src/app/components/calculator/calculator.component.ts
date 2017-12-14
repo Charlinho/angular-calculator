@@ -17,7 +17,20 @@ export class CalculatorComponent {
     this.displayValue = '' + this.displayValue + number;
   }
 
+  public operation(operation): void {
+    this.displayValue = this.displayValue + operation;
+  }
+
+  public calcOperation(): void {
+    let result = eval(this.displayValue.replace('÷', '/'));
+    this.displayValue = result.toString().replace('/', '÷');
+  }
+
   public clear(): void {
     this.displayValue = '0';
+  }
+
+  private getOperation(operation): string {
+    return operation == '÷' ? '/' : operation;
   }
 }
